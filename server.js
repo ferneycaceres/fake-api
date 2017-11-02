@@ -1,11 +1,10 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/dist'));
-app.listen(process.env.PORT || 8080);
-app.get('/*',function(req,res){
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-})
+server.use(middlewares);
+server.use(router);
 
-console.log('Console Listenig ...');
+server.listen(port);
