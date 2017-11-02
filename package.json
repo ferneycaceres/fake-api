@@ -4,8 +4,7 @@
   "description": "api-fake",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":  "json-server db.json"
+    "start": "node server.js"    
   },
   "author": "",
   "license": "ISC",
