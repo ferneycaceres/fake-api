@@ -147,7 +147,7 @@ module.exports = {
               "ReAssignInvoice",
             ],
             "permissions":[{
-                    "id": "432b7c9d-b474-4403-9c55-14a8ef89dbcc",
+                    "id": "1d3ff5cf-d850-4f9d-af3f-087c771ec2d9",
                     "type":"debtor",
                     "permissions":[
                         "ViewDashboardInvoices",
@@ -158,7 +158,7 @@ module.exports = {
                         "ViewAprovals"
                     ]
                 },{
-                  "id": "36ea0f1f-8b62-4f4c-88b1-f63762819381",
+                  "id": "c167e09c-67ed-4449-ba97-5bbb5130ff03",
                   "type":"supplier",
                   "permissions":[
                       "ViewDashboardInvoices",
@@ -166,7 +166,7 @@ module.exports = {
                       "ExecuteTransactions",
                   ]
               },{
-                    "id":"157bb9fd-ebb7-4602-8f92-c974cb97da1a",
+                    "id":"368aa808-758b-4d48-8bde-d95e4d7e19bf",
                     "type":"financial",
                     "permissions":[
                       "ViewDashboardInvoices",
