@@ -179,7 +179,7 @@ module.exports = {
                       "ExecuteTransactions",
                     ]
                 },{
-                    "id": "626a0de4-7688-4580-accd-98f1c7523123",
+                    "id": "b09fb980-edd3-4c59-9bb9-173e51f99dcd",
                     "type":"debtor",
                     "permissions":[
                         "GenerateOffers",
