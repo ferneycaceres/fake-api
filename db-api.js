@@ -158,7 +158,7 @@ module.exports = {
                         "ViewAprovals"
                     ]
                 },{
-                  "id": "b4565aff-b199-4268-8507-dfb3c7168cd5",
+                  "id": "c167e09c-67ed-4449-ba97-5bbb5130ff03",
                   "type":"supplier",
                   "permissions":[
                       "ViewDashboardInvoices",
