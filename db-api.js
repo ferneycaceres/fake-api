@@ -147,7 +147,7 @@ module.exports = {
               "ReAssignInvoice",
             ],
             "permissions":[{
-                    "id": "1d3ff5cf-d850-4f9d-af3f-087c771ec2d9",
+                    "id": "432b7c9d-b474-4403-9c55-14a8ef89dbcc",
                     "type":"debtor",
                     "permissions":[
                         "ViewDashboardInvoices",
@@ -158,7 +158,7 @@ module.exports = {
                         "ViewAprovals"
                     ]
                 },{
-                  "id": "c167e09c-67ed-4449-ba97-5bbb5130ff03",
+                  "id": "b4565aff-b199-4268-8507-dfb3c7168cd5",
                   "type":"supplier",
                   "permissions":[
                       "ViewDashboardInvoices",
@@ -166,7 +166,7 @@ module.exports = {
                       "ExecuteTransactions",
                   ]
               },{
-                    "id":"368aa808-758b-4d48-8bde-d95e4d7e19bf",
+                    "id":"c890cba6-7ccb-408e-b361-4bf51a0a17f9",
                     "type":"financial",
                     "permissions":[
                       "ViewDashboardInvoices",
@@ -179,7 +179,7 @@ module.exports = {
                       "ExecuteTransactions",
                     ]
                 },{
-                    "id": "b09fb980-edd3-4c59-9bb9-173e51f99dcd",
+                    "id": "626a0de4-7688-4580-accd-98f1c7523123",
                     "type":"debtor",
                     "permissions":[
                         "GenerateOffers",
