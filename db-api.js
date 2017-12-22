@@ -147,7 +147,7 @@ module.exports = {
               "ReAssignInvoice",
             ],
             "permissions":[{
-                    "id": "432b7c9d-b474-4403-9c55-14a8ef89dbcc",
+                    "id": "626a0de4-7688-4580-accd-98f1c7523123",
                     "type":"debtor",
                     "permissions":[
                         "ViewDashboardInvoices",
