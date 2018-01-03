@@ -126,7 +126,6 @@ module.exports = {
             graph2.push(item);
           }
       
-      
           return {
             "graph1": graph1,
             "graph2": graph2,
