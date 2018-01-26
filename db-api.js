@@ -103,7 +103,7 @@ module.exports = {
                 ]}
                 ],
                 expiration_date:faker.date.past(),
-                invoice_number:1,
+                invoice_number:2,
                 operation_date:faker.date.past(),
                 status:"drafted"
 
