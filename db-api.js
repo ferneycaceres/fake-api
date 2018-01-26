@@ -188,14 +188,13 @@ module.exports = {
             graph2.push(item);
           }
       
-      
           return {
             "graph1": graph1,
             "graph2": graph2,
             "agents": agents,
             "matrix": matrix,
             "debtspay": debts,
-            "transactions":transactions,
+            "transations":transactions,
             "companies": companies,
             "permissionsAll": [
               "ViewDashboardInvoices",
