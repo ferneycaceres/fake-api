@@ -32,34 +32,60 @@ module.exports = {
               value:faker.random.boolean()
             },
             tx_offer_batch:{
-              id : faker.random.uuid(),
-              amount_advance:faker.finance.amount(),
-              transaction_expenses : faker.finance.amount(),
-              discount_rate : Math.floor(Math.random() * 10),
-              comission_fixed :Math.floor(Math.random() * 10),
-              comission_variable :Math.floor(Math.random() * 10),
-              amount_due : faker.finance.amount(),
-              document_count : faker.random.uuid(),
-              status : "Pending",
-              invoices : {
-                amount_total: faker.finance.amount(),
-                country_code:"CL",
-                currency_code:"CLP",
-                debtor_id : faker.random.uuid(),
-                debtor_name:faker.company.companyName(),
-                debtor_tax_number: faker.random.uuid(),
-                dte_type:"",
-                due_date:faker.date.past(),
-                invoice_number:faker.random.uuid(),
-                issue_date:faker.date.past(),
-                issuer_id:faker.random.uuid(),
-                issuer_tax_number:faker.random.number(),
-                status: "Pending",
-                invoice_id:faker.random.uuid(),
-                require_ok: faker.random.boolean(),
-                require_po: faker.random.boolean(),
-                require_oc: faker.random.boolean(), 
-              },
+
+              id:faker.random.uuid(),
+              discount_rate: Math.floor(Math.random() * 3),
+              transaction_expenses: faker.finance.amount(),
+              comission_fixed:Math.floor(Math.random() * 4),
+              comission_variable:Math.floor(Math.random() * 5),
+              amount_advance : faker.finance.amount(),
+              amount_due: faker.finance.amount(),
+              document_count:Math.floor(Math.random() * 100),
+              created_at:faker.date.past(),
+              updated_at:faker.date.past(),
+              factoring_offers:[
+                {
+                  id:faker.random.uuid(),
+                  invoice_id:faker.random.uuid(),
+                  factoring_offer_batch_id:faker.random.uuid(),
+                  amount_advance:faker.finance.amount(),
+                  transaction_expenses:faker.finance.amount(),
+                  discount_rate:Math.floor(Math.random() * 3),
+                  comission_fixed:Math.floor(Math.random() * 4),
+                  comission_variable:Math.floor(Math.random() * 5),
+                  amount_due:faker.finance.amount(),
+                  operation_date:faker.date.past(),
+                  created_at:faker.date.past(),
+                  updated_at:faker.date.past(),
+                  new_due_date:null,
+                  assignee_id:faker.random.uuid(),
+                  invoice: [
+                  {
+                    issuer_id:faker.random.uuid(),
+                    issuer_tax_number:faker.random.number(),
+                    issuer_name: faker.name.firstName()+' '+faker.name.lastName(),
+                    debtor_id: faker.random.uuid(),
+                    debtor_tax_number : faker.random.number(),
+                    debtor_name: faker.name.firstName()+' '+faker.name.lastName(),
+                    invoice_number:faker.random.number(),
+                    issue_date: faker.date.past(),
+                    due_date : faker.date.past(),
+                    amount_total:faker.finance.amount(),
+                    country_code: 'CL',
+                    currency_code:'CLP',
+                    status:"drafted",
+                    dte:null,
+                    dte_type:null
+                  }
+                ]}
+                ],
+                expiration_date:faker.date.past(),
+                invoice_number:1,
+                operation_date:faker.date.past(),
+                status:"drafted"
+
+            },
+
               tx_pvr_last_payment:{
                 date_lp:faker.date.past(),
                 amount:faker.finance.amount(),
@@ -69,7 +95,7 @@ module.exports = {
               }
 
 
-            }
+            
 
           })
         }
