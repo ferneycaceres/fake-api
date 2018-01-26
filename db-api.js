@@ -12,7 +12,69 @@ module.exports = {
         let graph2 = [];
         let graph3 = [];
         let months = ["2016-10", "2016-11", "2016-12", "2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-08", "2017-09", "2017-10", "2017-11"];      
-      
+        let transactions = [];
+
+        for (let t = 0; t<=10; t++){
+          transactions.push({
+            tx_id : faker.random.uuid(),
+            tx_amount: faker.finance.amount(),
+            tx_date : faker.date.past(),
+            tx_ok2pay:{
+              validated:faker.random.boolean(),
+              value:faker.random.boolean()
+            },
+            tx_pvr:{
+              validated:faker.random.boolean(),
+              value:faker.random.boolean()
+            },
+            tx_oc:{
+              validated:faker.random.boolean(),
+              value:faker.random.boolean()
+            },
+            tx_offer_batch:{
+              id : faker.random.uuid(),
+              amount_advance:faker.finance.amount(),
+              transaction_expenses : faker.finance.amount(),
+              discount_rate : Math.floor(Math.random() * 10),
+              comission_fixed :Math.floor(Math.random() * 10),
+              comission_variable :Math.floor(Math.random() * 10),
+              amount_due : faker.finance.amount(),
+              document_count : faker.random.uuid(),
+              status : "Pending",
+              invoices : {
+                amount_total: faker.finance.amount(),
+                country_code:"CL",
+                currency_code:"CLP",
+                debtor_id : faker.random.uuid(),
+                debtor_name:faker.company.companyName(),
+                debtor_tax_number: faker.random.uuid(),
+                dte_type:"",
+                due_date:faker.date.past(),
+                invoice_number:faker.random.uuid(),
+                issue_date:faker.date.past(),
+                issuer_id:faker.random.uuid(),
+                issuer_tax_number:faker.random.number(),
+                status: "Pending",
+                invoice_id:faker.random.uuid(),
+                require_ok: faker.random.boolean(),
+                require_po: faker.random.boolean(),
+                require_oc: faker.random.boolean(), 
+              },
+              tx_pvr_last_payment:{
+                date_lp:faker.date.past(),
+                amount:faker.finance.amount(),
+                amount_change:faker.finance.amount(),
+                employees_num:faker.random.number(),
+                employees_change:faker.random.number()
+              }
+
+
+            }
+
+          })
+        }
+
+
         for (let id = 0; id < 100; id++){
             let first_name = faker.name.firstName();
             let last_name = faker.name.lastName();
@@ -133,6 +195,7 @@ module.exports = {
             "agents": agents,
             "matrix": matrix,
             "debtspay": debts,
+            "transactions":transactions,
             "companies": companies,
             "permissionsAll": [
               "ViewDashboardInvoices",
