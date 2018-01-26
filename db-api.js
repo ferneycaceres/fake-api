@@ -215,7 +215,7 @@ module.exports = {
             "agents": agents,
             "matrix": matrix,
             "debtspay": debts,
-            "transaciones":transactions,
+            "transactions":transactions,
             "companies": companies,
             "permissionsAll": [
               "ViewDashboardInvoices",
