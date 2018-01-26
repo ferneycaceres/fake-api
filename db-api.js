@@ -75,7 +75,10 @@ module.exports = {
                     currency_code:'CLP',
                     status:"drafted",
                     dte:null,
-                    dte_type:null
+                    dte_type:null,
+                    require_ok:faker.random.boolean(),
+                    require_po:faker.random.boolean(),
+                    require_pvr:faker.random.boolean(),
                   }
                 ]}
                 ],
