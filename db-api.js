@@ -94,9 +94,6 @@ module.exports = {
                 employees_change:faker.random.number()
               }
 
-
-            
-
           })
         }
 
@@ -147,9 +144,7 @@ module.exports = {
               "country": country
             });
         
-          }
-        
-        
+          }  
           for (let c = 0 ; c <100;c++){
               let id = c+1;
               let c_company = faker.company.companyName();
