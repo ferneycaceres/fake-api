@@ -292,24 +292,42 @@ module.exports = {
                     "type":"financial",
                     "permissions":[
                       "ViewDashboardInvoices",
-                      "ViewSuppliers",
-                      "ViewAgents",
-                      "ViewOPMatrix",
-                      "ViewDebtsPay",
-                      "ViewAprovals",
-                      "ViewOffers",
-                      "ExecuteTransactions",
+                      "ExecuteTransactionsByFinancial",
+                      "ViewOPMatrix"
                     ]
                 },{
-                    "id": "b09fb980-edd3-4c59-9bb9-173e51f99dcd",
-                    "type":"debtor",
-                    "permissions":[
-                        "GenerateOffers",
-                        "ViewSuppliers",
-                        "TransactionsLogs",
-                        "ViewAgents"
-                    ]
-                }],
+                  "id": "fab2d8e0-2148-4b83-8efa-14e5d618c42c",
+                  "type":"executive",
+                  "permissions":[
+                      "ViewDashboardInvoices",
+                      "ExecuteTransactionsByFinancial",
+                      "ViewOPMatrix"
+                  ]
+                },{
+                  "id": "c2878627-ca62-4300-9a1e-7626c9802ed6",
+                  "type":"executive",
+                  "permissions":[
+                      "ViewDashboardInvoices",
+                      "ExecuteTransactionsByFinancial",
+                      "ViewOPMatrix"
+                  ]
+                },{
+                "id": "d9afa04d-633f-4b00-a980-e56752430b55",
+                "type":"supplier",
+                "permissions":[
+                    "ViewDashboardInvoices",
+                    "ViewOffers",
+                    "ExecuteTransactions",
+                ]
+              },{
+                "id": "cc1335eb-ebad-4c85-ab3e-2229586fd9ce",
+                "type":"supplier",
+                "permissions":[
+                    "ViewDashboardInvoices",
+                    "ViewOffers",
+                    "ExecuteTransactions",
+                ]
+              }],
             "appconfig":[
                 {
                 "subdomain":"nuevocapital",
