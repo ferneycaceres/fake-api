@@ -1,5 +1,5 @@
 var faker = require('faker');
-
+var txs = require('./tx.json');
 module.exports = { 
     data : function (){
 
@@ -14,7 +14,10 @@ module.exports = {
         let months = ["2016-10", "2016-11", "2016-12", "2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-08", "2017-09", "2017-10", "2017-11"];      
         let transactions = [];
 
-        for (let t = 0; t<=10; t++){
+
+        transactions = txs;
+
+        /*for (let t = 0; t<=10; t++){
           transactions.push({
             tx_id : faker.random.uuid(),
             tx_amount: faker.finance.amount(),
@@ -134,7 +137,7 @@ module.exports = {
               }
 
           })
-        }
+        }*/
 
 
         for (let id = 0; id < 100; id++){
