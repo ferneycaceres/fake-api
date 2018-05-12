@@ -1,5 +1,8 @@
 var faker = require('faker');
-var txs = require('./tx.json');
+
+//var ceded = require('./ceded_last.json');
+var ceded = require('./ceded.json');
+
 module.exports = { 
     data : function (){
 
@@ -11,13 +14,20 @@ module.exports = {
         let graph1 = [];
         let graph2 = [];
         let graph3 = [];
+        let contexts = [];
+        let permissionRole = [];
+        let permisionsRoleTree = [];
+        let subjects = ["debtor", "financial", "supplier"];
+        let actions = ["view","edit","create"];
+        let option_value = ["less_than","equal_to","greater_than"];
+        let resources = ["invoices","transactions","offers"];
+        let roleNames = ["debtor", "supplier","financial","executive"];
+        let roleDescriptions = ["Descripción para los ejecutivos", "Descripción para los empleados"];
         let months = ["2016-10", "2016-11", "2016-12", "2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-08", "2017-09", "2017-10", "2017-11"];      
+        let transactionStates = ["accepted_by_supplier","approved_by_financial","assigment_initializated","assigned_completed","paid"]
         let transactions = [];
 
-
-        transactions = txs;
-
-        /*for (let t = 0; t<=10; t++){
+        for (let t = 0; t<=10; t++){
           transactions.push({
             tx_id : faker.random.uuid(),
             tx_amount: faker.finance.amount(),
@@ -78,48 +88,9 @@ module.exports = {
                     currency_code:'CLP',
                     status:"drafted",
                     dte:null,
-                    dte_type:null,
-                    require_ok:faker.random.boolean(),
-                    require_po:faker.random.boolean(),
-                    require_pvr:faker.random.boolean(),
+                    dte_type:null
                   }
-                ]},{
-                  id:faker.random.uuid(),
-                  invoice_id:faker.random.uuid(),
-                  factoring_offer_batch_id:faker.random.uuid(),
-                  amount_advance:faker.finance.amount(),
-                  transaction_expenses:faker.finance.amount(),
-                  discount_rate:Math.floor(Math.random() * 3),
-                  comission_fixed:Math.floor(Math.random() * 4),
-                  comission_variable:Math.floor(Math.random() * 5),
-                  amount_due:faker.finance.amount(),
-                  operation_date:faker.date.past(),
-                  created_at:faker.date.past(),
-                  updated_at:faker.date.past(),
-                  new_due_date:null,
-                  assignee_id:faker.random.uuid(),
-                  invoice: [
-                  {
-                    issuer_id:faker.random.uuid(),
-                    issuer_tax_number:faker.random.number(),
-                    issuer_name: faker.name.firstName()+' '+faker.name.lastName(),
-                    debtor_id: faker.random.uuid(),
-                    debtor_tax_number : faker.random.number(),
-                    debtor_name: faker.name.firstName()+' '+faker.name.lastName(),
-                    invoice_number:faker.random.number(),
-                    issue_date: faker.date.past(),
-                    due_date : faker.date.past(),
-                    amount_total:faker.finance.amount(),
-                    country_code: 'CL',
-                    currency_code:'CLP',
-                    status:"drafted",
-                    dte:null,
-                    dte_type:null,
-                    require_ok:faker.random.boolean(),
-                    require_po:faker.random.boolean(),
-                    require_pvr:faker.random.boolean(),
-                  }
-                ]},
+                ]}
                 ],
                 expiration_date:faker.date.past(),
                 invoice_number:1,
@@ -137,7 +108,7 @@ module.exports = {
               }
 
           })
-        }*/
+        }
 
 
         for (let id = 0; id < 100; id++){
@@ -250,6 +221,453 @@ module.exports = {
             },
             graph2.push(item);
           }
+
+          for(let i= 0; i<50; i++){
+            let transactionId = faker.random.uuid();
+            let assignor_user_id = faker.random.uuid();
+            let assignee_user_id = faker.random.uuid();
+            let factoring_offer_batch_id = faker.random.uuid();
+            let invoice_id = faker.random.uuid();
+            let invoice_number=Math.floor(Math.random() * 8);
+            let context = {
+            "id": faker.random.uuid(),
+            "transaction_id": transactionId,
+            "ok2_pay_rule_id": faker.random.uuid(),
+            "created_at": faker.date.past(),
+            "updated_at": faker.date.past(),
+            "previred_document_exist": false,
+            "purchase_order_exist": false,
+            "organization_tax_number": faker.random.number(),
+            "purchase_order_validations": null,
+            
+            "transaction": {
+               "expiration_date": faker.date.past(),
+               "invoice_number": invoice_number,
+               "operation_date": faker.date.past(),
+               "status": transactionStates[i%5],
+               "id": transactionId,
+               "assignor_user_id": assignor_user_id,
+               "assignee_user_id": assignee_user_id,
+               "factoring_offer_batch_id": factoring_offer_batch_id,
+               "new_due_date": null,
+               "currency_code": "CLP",
+               "amount": Math.round(Math.random() * 10000000000) / 100,
+               "debtor_email": faker.internet.email(),
+               "created_at": faker.date.past(),
+               "updated_at": faker.date.past(),
+               "assignee_id": assignee_user_id,
+               "assignor_id": assignor_user_id,
+               "assignor_tax_number": faker.random.number(),
+               "factoring_offer_batch": {
+               "id": factoring_offer_batch_id,
+               "discount_rate": Math.round(Math.random() * 1000) / 100,
+               "transaction_expenses": Math.round(Math.random() * 1000) / 100,
+               "comission_fixed": Math.round(Math.random() * 1000) / 100,
+               "comission_variable": Math.round(Math.random() * 1000) / 100,
+               "amount_advance": 89357502.61,
+               "amount_due": Math.round(Math.random() * 10000000000) / 100,
+               "document_count": 0,
+               "created_at": faker.date.past(),
+               "updated_at": faker.date.past(),
+               "factoring_offers": [
+                {
+                   "id": faker.random.uuid(),
+                   "invoice_id": invoice_id,
+                   "factoring_offer_batch_id": factoring_offer_batch_id,
+                   "amount_advance": Math.round(Math.random() * 10000000000) / 100,
+                   "transaction_expenses": Math.round(Math.random() * 1000) / 100,
+                   "discount_rate":Math.round(Math.random() * 1000) / 100,
+                   "comission_fixed": Math.round(Math.random() * 1000) / 100,
+                   "comission_variable": Math.round(Math.random() * 1000) / 100,
+                   "amount_due": Math.round(Math.random() * 10000000000) / 100,
+                   "operation_date": null,
+                   "created_at": faker.date.past(),
+                   "updated_at": faker.date.past(),
+                   "new_due_date": null,
+                   "assignee_id": assignee_user_id,
+                   "invoice": {
+                      "issuer_id": faker.random.uuid(),
+                      "issuer_tax_number": faker.random.number(),
+                      "issuer_name": faker.name.findName(),
+                      "debtor_id": faker.random.uuid(),
+                      "debtor_tax_number": faker.random.number(),
+                      "debtor_name": faker.name.findName(),
+                      "invoice_number": invoice_number,
+                      "issue_date": faker.random.uuid(),
+                      "due_date": null,
+                      "amount_total": Math.round(Math.random() * 10000000) / 100,
+                      "country_code": "CL",
+                      "currency_code": null,
+                      "status": "none",
+                      "dte": null,
+                      "dte_type": "33",
+                      "id": faker.random.uuid(),
+                  }
+                },
+                {
+                "id": faker.random.uuid(),
+                "invoice_id": invoice_id,
+                "factoring_offer_batch_id": factoring_offer_batch_id,
+                "amount_advance": Math.round(Math.random() * 10000000000) / 100,
+                "transaction_expenses": Math.round(Math.random() * 10000000000) / 100,
+                "discount_rate": Math.round(Math.random() * 1000) / 100,
+                "comission_fixed": Math.round(Math.random() * 1000) / 100,
+                "comission_variable": Math.round(Math.random() * 1000) / 100,
+                "amount_due": Math.round(Math.random() * 10000000000) / 100,
+                "operation_date": null,
+                "created_at": faker.date.past(),
+                "updated_at": faker.date.past(),
+                "new_due_date": null,
+                "assignee_id": assignee_user_id,
+                "invoice": {
+                    "issuer_id": faker.random.uuid(),
+                    "issuer_tax_number": faker.random.number(),
+                    "issuer_name": faker.name.findName(),
+                    "debtor_id": faker.random.uuid(),
+                    "debtor_tax_number": faker.random.number(),
+                    "debtor_name": faker.name.findName(),
+                    "invoice_number": invoice_number,
+                    "issue_date": faker.random.uuid(),
+                    "due_date": null,
+                    "amount_total": Math.round(Math.random() * 10000000) / 100,
+                    "country_code": "CL",
+                    "currency_code": null,
+                    "status": "none",
+                    "dte": null,
+                    "dte_type": "33",
+                    "id": faker.random.uuid(),
+                  }
+                }
+            ],
+            }
+          }
+          }
+          contexts.push(context);
+          }
+
+          for(let x = 0; x < 10; x++){
+            let role = {
+                  "data":{
+                    "id": faker.random.uuid(),
+                    "name": roleNames[x%2],
+                    "description": roleDescriptions[x%2],
+                  },
+                    "children" : [
+                      {
+                        "data" :{
+                        "name": "feature 1",
+                        },
+                        "children":[
+                        {
+                          "data":{
+                          "name": "edit"
+                          },
+                          "children": [
+                          {
+                            "data": {
+                            "name": "action 1"
+                            },
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                  "name": "rule 1",
+                                  "value":"yxt + w",
+                                  }
+                              }
+                            ]
+                          },
+                          {
+                            "data":{
+                            "name": "action 2"
+                            },
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                "name": "rule 2",
+                                "value":"yxt + w"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                        },
+                        {
+                          "data":{
+                            "name": "view",
+                          },
+                          "children": [
+                            {
+                              "data":{
+                              "name": "action 1",
+                              },
+                              "children":[
+                                {
+                                  "data":{
+                                  "name": "rule 1",
+                                  "value": "xyz"
+                                  }
+                                },
+                                {
+                                  "data":{
+                                  "name": "rule 2",
+                                  "value":"yxt + w"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "action 2",
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                "name": "rule 2",
+                                "value":"yxt + w"
+                                }
+                              }
+                            ]
+                            }
+                          ]
+                        }
+                      ]
+                      },
+                      {
+                        "data" :{
+                        "name": "feature 2",
+                        "leaf": "false",
+                        },
+                        "children":[
+                        {
+                          "data":{
+                          "name": "edit"
+                          },
+                          "children": [
+                          {
+                            "data": {
+                            "name": "action 1"
+                            },
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                  "name": "rule 1",
+                                  "value":"yxt + w",
+                                  }
+                              }
+                            ]
+                          },
+                          {
+                            "data":{
+                            "name": "action 2"
+                            },
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                "name": "rule 2",
+                                "value":"yxt + w"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                        },
+                        {
+                          "data":{
+                            "name": "view",
+                          },
+                          "children": [
+                            {
+                              "data":{
+                              "name": "action 1",
+                              },
+                              "children":[
+                                {
+                                  "data":{
+                                  "name": "rule 1",
+                                  "value": "xyz"
+                                  }
+                                },
+                                {
+                                  "data":{
+                                  "name": "rule 2",
+                                  "value":"yxt + w"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "action 2",
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                "name": "rule 2",
+                                "value":"yxt + w"
+                                }
+                              }
+                            ]
+                            }
+                          ]
+                        }
+                      ]
+                      },
+                      {
+                        "data" :{
+                        "name": "feature 3",
+                        "leaf": "false",
+                        },
+                        "children":[
+                        {
+                          "data":{
+                          "name": "edit"
+                          },
+                          "children": [
+                          {
+                            "data": {
+                            "name": "action 1"
+                            },
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                  "name": "rule 1",
+                                  "value":"yxt + w",
+                                  }
+                              }
+                            ]
+                          },
+                          {
+                            "data":{
+                            "name": "action 2"
+                            },
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                "name": "rule 2",
+                                "value":"yxt + w"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                        },
+                        {
+                          "data":{
+                            "name": "view",
+                          },
+                          "children": [
+                            {
+                              "data":{
+                              "name": "action 1",
+                              },
+                              "children":[
+                                {
+                                  "data":{
+                                  "name": "rule 1",
+                                  "value": "xyz"
+                                  }
+                                },
+                                {
+                                  "data":{
+                                  "name": "rule 2",
+                                  "value":"yxt + w"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "action 2",
+                            "children":[
+                              {
+                                "data":{
+                                "name": "rule 1",
+                                "value": "xyz"
+                                }
+                              },
+                              {
+                                "data":{
+                                "name": "rule 2",
+                                "value":"yxt + w"
+                                }
+                              }
+                            ]
+                            }
+                          ]
+                        }
+                      ]
+                      }                           
+                    ]
+            }
+            permisionsRoleTree.push(role);
+          }
+
+
+          for(let i=0; i<20; i++){
+            let permissionValue = {                   
+                            "description": "One policy to rule them all.",
+                            "subjects": roleNames[Math.floor(Math.random()*4)],
+                            "actions" : actions[Math.floor(Math.random()*3)],
+                            "effect": "allow",
+                            "resources": resources[Math.floor(Math.random()*3)],
+                            "conditions": {
+                              "rule": {
+                                  "type": "aritmetic",
+                                  "options": {
+                                    "field":"amount",
+                                    "type": i,
+                                    "value": "10000"
+                                  }
+                              }
+                            }
+                          }                   
+            permissionRole.push(permissionValue);
+          }
+
+
       
           return {
             "graph1": graph1,
@@ -257,8 +675,12 @@ module.exports = {
             "agents": agents,
             "matrix": matrix,
             "debtspay": debts,
+            "permissionRole": permissionRole,
+            "permisionsRoleTree": permisionsRoleTree,
+            "contexts": contexts,
             "transactions":transactions,
             "companies": companies,
+            "ceded":ceded,
             "permissionsAll": [
               "ViewDashboardInvoices",
               "ViewOffers",
@@ -295,42 +717,24 @@ module.exports = {
                     "type":"financial",
                     "permissions":[
                       "ViewDashboardInvoices",
-                      "ExecuteTransactionsByFinancial",
-                      "ViewOPMatrix"
+                      "ViewSuppliers",
+                      "ViewAgents",
+                      "ViewOPMatrix",
+                      "ViewDebtsPay",
+                      "ViewAprovals",
+                      "ViewOffers",
+                      "ExecuteTransactions",
                     ]
                 },{
-                  "id": "fab2d8e0-2148-4b83-8efa-14e5d618c42c",
-                  "type":"executive",
-                  "permissions":[
-                      "ViewDashboardInvoices",
-                      "ExecuteTransactionsByFinancial",
-                      "ViewOPMatrix"
-                  ]
-                },{
-                  "id": "c2878627-ca62-4300-9a1e-7626c9802ed6",
-                  "type":"executive",
-                  "permissions":[
-                      "ViewDashboardInvoices",
-                      "ExecuteTransactionsByFinancial",
-                      "ViewOPMatrix"
-                  ]
-                },{
-                "id": "d9afa04d-633f-4b00-a980-e56752430b55",
-                "type":"supplier",
-                "permissions":[
-                    "ViewDashboardInvoices",
-                    "ViewOffers",
-                    "ExecuteTransactions",
-                ]
-              },{
-                "id": "cc1335eb-ebad-4c85-ab3e-2229586fd9ce",
-                "type":"supplier",
-                "permissions":[
-                    "ViewDashboardInvoices",
-                    "ViewOffers",
-                    "ExecuteTransactions",
-                ]
-              }],
+                    "id": "b09fb980-edd3-4c59-9bb9-173e51f99dcd",
+                    "type":"debtor",
+                    "permissions":[
+                        "GenerateOffers",
+                        "ViewSuppliers",
+                        "TransactionsLogs",
+                        "ViewAgents"
+                    ]
+                }],
             "appconfig":[
                 {
                 "subdomain":"nuevocapital",
