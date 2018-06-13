@@ -3,6 +3,9 @@ var faker = require('faker');
 //var ceded = require('./ceded_last.json');
 var ceded = require('./ceded.json');
 
+var config = require('./config.json');
+
+
 module.exports = { 
     data : function (){
 
@@ -681,6 +684,7 @@ module.exports = {
             "transactions":transactions,
             "companies": companies,
             "ceded":ceded,
+            "config":config,
             "permissionsAll": [
               "ViewDashboardInvoices",
               "ViewOffers",

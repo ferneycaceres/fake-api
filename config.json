@@ -1,0 +1,20 @@
+[
+    {
+        "id":"1",
+        "domain":"localhost:4200/app1",
+        "template":"<h1>Portalfinance App</h1>",
+        "app_name":"Portalfinance",
+        "background":"",
+        "logo":"https://btg.portalfinance.co/assets/portalfinance/images/primary_logo.png",
+        "type":"Financial"
+    },
+    {
+        "id":"2",
+        "domain":"localhost:4200/app2",
+        "template":"<h1>Localhost 4000</h1>",
+        "app_name":"Carola",
+        "background":"",
+        "logo":"https://carola.portalfinance.co/assets/carola_btg/images/primary_logo.png",
+        "type":"confirming_partner"
+    }
+]
