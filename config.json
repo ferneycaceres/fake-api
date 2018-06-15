@@ -6,7 +6,20 @@
         "app_name":"Portalfinance",
         "background":"",
         "logo":"https://btg.portalfinance.co/assets/portalfinance/images/primary_logo.png",
-        "type":"Financial"
+        "site_type":"Financial",
+        "company":"1", 
+        "theme": {
+            "primary_color": "#004C83",
+            "secondary_color": "#004C83",
+            "header_color": "white",
+            "header_links_color": "#004C83",
+            "header_links_hover_color": "#004C83",
+            "navbar_color": "#f7f7f7",
+            "navbar_link_color": "#004C83",
+            "navbar_link_hover_color": "#004C83",
+            "login_position": "flex-end",
+            "login_header_color": "white"
+          }
     },
     {
         "id":"2",
@@ -15,6 +28,63 @@
         "app_name":"Carola",
         "background":"",
         "logo":"https://carola.portalfinance.co/assets/carola_btg/images/primary_logo.png",
-        "type":"confirming_partner"
+        "site_type":"confirming_partner",
+        "company":"2",
+        "theme": {
+            "primary_color": "#6A6B69",
+            "secondary_color": "#6A6B69",
+            "header_color": "white",
+            "header_links_color": "#343434",
+            "header_links_hover_color": "#464744",
+            "navbar_color": "#ededed",
+            "navbar_link_color": "#000000",
+            "navbar_link_hover_color": "#343434",
+            "login_position": "flex-end",
+            "login_header_color": "white"
+          }
+    },
+    {
+        "id":"3",
+        "domain":"localhost:5000/",
+        "template":"<h1>Localhost 5000</h1>",
+        "app_name":"BTG",
+        "background":"https://btg.portalfinance.co/assets/portalfinance/images/background.jpg",
+        "logo":"https://btg.portalfinance.co/assets/portalfinance/images/primary_logo.png",
+        "site_type":"Financial",
+        "company":"3",
+        "theme": {
+            "primary_color": "#004C83",
+            "secondary_color": "#004C83",
+            "header_color": "white",
+            "header_links_color": "#004C83",
+            "header_links_hover_color": "#004C83",
+            "navbar_color": "#f7f7f7",
+            "navbar_link_color": "#004C83",
+            "navbar_link_hover_color": "#004C83",
+            "login_position": "flex-end",
+            "login_header_color": "white"
+          }
+    },
+    {
+        "id":"4",
+        "domain":"localhost:4000/",
+        "template":"<h1>Localhost 4000</h1>",
+        "app_name":"Carola",
+        "background":"https://carola.portalfinance.co/assets/carola_btg/images/background.jpg",
+        "logo":"https://carola.portalfinance.co/assets/carola_btg/images/primary_logo.png",
+        "site_type":"confirming_partner",
+        "company":"4",
+        "theme": {
+            "primary_color": "blue",
+            "secondary_color": "#004C83",
+            "header_color": "white",
+            "header_links_color": "#004C83",
+            "header_links_hover_color": "#004C83",
+            "navbar_color": "#f7f7f7",
+            "navbar_link_color": "#004C83",
+            "navbar_link_hover_color": "#004C83",
+            "login_position": "flex-end",
+            "login_header_color": "white"
+          }
     }
 ]
