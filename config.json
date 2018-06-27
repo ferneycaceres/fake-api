@@ -1,10 +1,10 @@
 [
     {
         "id":"1",
-        "domain":"localhost:4200/app1",
+        "domain":"www.btg-pf.co/",
         "template":"<h1>Portalfinance App</h1>",
         "app_name":"Portalfinance",
-        "background":"",
+        "background":"https://btg.portalfinance.co/assets/portalfinance/images/background.jpg",
         "logo":"https://btg.portalfinance.co/assets/portalfinance/images/primary_logo.png",
         "site_type":"Financial",
         "company":"1", 
@@ -23,10 +23,10 @@
     },
     {
         "id":"2",
-        "domain":"localhost:4200/app2",
+        "domain":"www.carola-pf.co/",
         "template":"<h1>Localhost 4000</h1>",
         "app_name":"Carola",
-        "background":"",
+        "background":"https://carola.portalfinance.co/assets/carola_btg/images/background.jpg",
         "logo":"https://carola.portalfinance.co/assets/carola_btg/images/primary_logo.png",
         "site_type":"confirming_partner",
         "company":"2",
