@@ -1,0 +1,14 @@
+[
+        {
+            "code":"SII",
+            "provider_name":"SII Empresa",
+            "linked":false,
+            "account_id":"12345456"
+        },
+        {
+            "code":"PRV",
+            "provider_name":"Previred",
+            "linked":false,
+            "account_id":null
+        }
+]

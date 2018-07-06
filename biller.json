@@ -1,0 +1,26 @@
+[
+        {
+            "code":"APT",
+            "biller_name":"Acepta",
+            "linked":true,
+            "account_id":"232325658"
+        },
+        {
+            "code":"GSK",
+            "biller_name":"Gosocket",
+            "linked":false,
+            "account_id":null
+        },
+        {
+            "code":"DBN",
+            "biller_name":"Dbnet",
+            "linked":false,
+            "account_id":null
+        },
+        {
+            "code":"MPM",
+            "biller_name":"Mi Pyme - SII",
+            "linked":true,
+            "account_id":"2323256588"
+        }
+]

@@ -5,6 +5,11 @@ var ceded = require('./ceded.json');
 
 var config = require('./config.json');
 
+var providers = require('./data-providers.json');
+
+var billers = require('./data-providers.json');
+
+
 
 module.exports = { 
     data : function (){
@@ -685,6 +690,8 @@ module.exports = {
             "companies": companies,
             "ceded":ceded,
             "config":config,
+            "providers":providers,
+            "billers":billers,
             "permissionsAll": [
               "ViewDashboardInvoices",
               "ViewOffers",
