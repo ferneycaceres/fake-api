@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "transaction_info": {
+        "id": "f6caffd2-1c1c-4e40-a1f1-f4565b2dbaaa",
+        "assignor_id": "68002f5d-59a1-4a84-8762-d3c83274683c",
+        "assignee_id": "2cb20e78-1719-4d05-bb3f-96f2b5f2d6a8",
+        "assignor_user_id": "db6856d4-9362-4158-ba04-8f90fea26250",
+        "assignee_user_id": null,
+        "assignor_tax_number": "76656058K",
+        "factoring_offer_batch_id": "94f19a8f-5f9d-49ab-a873-ca737166dddf",
+        "new_due_date": "",
+        "currency_code": "CLP",
+        "amount": 16852522.96,
+        "debtor_email": "jclexploraciones@gmail.com",
+        "operation_date": "2018-07-06T14:19:33.330Z",
+        "expiration_date": "2018-07-07T14:19:33.330Z",
+        "status": "accepted_by_supplier",
+        "factoring_offer_batch": {
+          "id": "94f19a8f-5f9d-49ab-a873-ca737166dddf",
+          "discount_rate": 0.015,
+          "transaction_expenses": 0,
+          "comission_fixed": 0,
+          "comission_variable": 0,
+          "amount_advance": 16852522.96,
+          "amount_due": 17012621.928120002,
+          "document_count": 0,
+          "created_at": "2018-07-06T14:17:33.573Z",
+          "updated_at": "2018-07-06T14:18:41.261Z",
+          "organization_tax_number": "76656058K",
+          "assignee_id": "262ead3a-b953-4654-a28c-f413a4a608ce",
+          "comission_variable_value": 0,
+          "comissions_and_expenses": 0,
+          "discount": 160098.96812,
+          "average_days": 19,
+          "total_cost": 0.015000000000000102,
+          "expiration_date": "2018-07-07T14:18:41.261Z",
+          "invoice_number": 1,
+          "operation_date": "2018-07-06T14:17:33.573Z",
+          "status": "accepted_by_user",
+          "amount_total_invoices": 17196452,
+          "factoring_offers": [
+            {
+              "id": "f72c1129-111f-4c75-b47f-e426cf229cab",
+              "invoice_id": "70276ee5-1939-4c91-b216-c3ce264037cc",
+              "factoring_offer_batch_id": "94f19a8f-5f9d-49ab-a873-ca737166dddf",
+              "amount_advance": 16852522.96,
+              "discount_rate": 0.015,
+              "operation_date": "2018-06-28",
+              "created_at": "2018-06-28T12:57:52.632Z",
+              "updated_at": "2018-07-06T14:18:41.263Z",
+              "due_date": "2018-07-27T00:00:00.000Z",
+              "rate_advanced": 0.98,
+              "discount": 160098.96812,
+              "due_days": 30,
+              "days_outstanding": 19,
+              "invoice": {
+                "issuer_id": "68002f5d-59a1-4a84-8762-d3c83274683c",
+                "issuer_tax_number": "76656058K",
+                "issuer_name": "sociedad campos y campos ltda",
+                "debtor_id": "fc55185c-1e09-4794-9eb8-c4214e5d6138",
+                "debtor_tax_number": "827894001",
+                "debtor_name": "CIA EXPLORADORA Y EXPLOTADORA MINERA CHILENO RUMANA S A",
+                "invoice_number": "19",
+                "issue_date": "2018-06-27T13:00:00.000Z",
+                "due_date": null,
+                "amount_total": 17196452,
+                "country_code": "CL",
+                "currency_code": null,
+                "status": "idle",
+                "assignment_response": {
+                  "msgs": null,
+                  "updated_at": null
+                },
+                "referencia": null,
+                "receipt_status": "Recibo otorgado por el receptor",
+                "dte_type": "33",
+                "s3_url": "https://pf-documents-qa.s3.amazonaws.com/uploads/invoice/dte/70276ee5-1939-4c91-b216-c3ce264037cc/DTE-2018-07-06_20_15_28_%2B0000-76656058K-827894001-33-19-2018-06-27.xml?X-Amz-Expires=600&X-Amz-Date=20180709T205428Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSVW2C6AFMIVCJ6Q/20180709/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=47f79949cf047eafc84b1a5615d3ea4bcb17a316e45cc2b1ece4c64d75c8d397",
+                "organization_errors": [],
+                "id": "70276ee5-1939-4c91-b216-c3ce264037cc",
+                "purchase_order_id":"c3ce264037ccc3ce264037ccc3ce264037cc"
+              }
+            }
+          ]
+        }
+      },
+      "previred_task":{
+        "last_payment":"2018-05-30",
+        "amount":558923,
+        "amount_avg":452262,
+        "employees_num":25,
+        "employees_num_avg":15
+      },
+      "validation_task":{
+        "approved":false,
+        "purchase_order_approved":true,
+        "previred_documents_approved":false
+      },
+      "ok2pay_task":{
+        "transaction_should_be_approved":true,
+        "purchase_order_should_be_approved":true,
+        "previred_should_be_approved":true,
+        "executives":[
+          {
+            "executive_name":"John Doe"
+          },
+          {
+            "executive_name":"Alan Smith"
+          }
+        ]
+         
+        }
+      }
+  ]
+}
