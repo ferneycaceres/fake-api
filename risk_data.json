@@ -1,0 +1,8 @@
+{
+    "tax_number":"1",
+    "debtor_name":"WOM Mobile",
+    "monthly_quote":10500000000,
+    "indebtedness_limit":23000000000,
+    "default_probability":4.70,
+    "risk_level":"B"
+}
