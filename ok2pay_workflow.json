@@ -1,115 +1,505 @@
 {
-  "data": [
+	"financial_groups": [
+		{
+			"group_id": "445791fe-a0df-11e8-98d0-529269fb1459",
+			"group_name": "AAA",
+			"tasks": [
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
+			]
+    },
     {
-      "transaction_info": {
-        "id": "f6caffd2-1c1c-4e40-a1f1-f4565b2dbaaa",
-        "assignor_id": "68002f5d-59a1-4a84-8762-d3c83274683c",
-        "assignee_id": "2cb20e78-1719-4d05-bb3f-96f2b5f2d6a8",
-        "assignor_user_id": "db6856d4-9362-4158-ba04-8f90fea26250",
-        "assignee_user_id": null,
-        "assignor_tax_number": "76656058K",
-        "factoring_offer_batch_id": "94f19a8f-5f9d-49ab-a873-ca737166dddf",
-        "new_due_date": "",
-        "currency_code": "CLP",
-        "amount": 16852522.96,
-        "debtor_email": "jclexploraciones@gmail.com",
-        "operation_date": "2018-07-06T14:19:33.330Z",
-        "expiration_date": "2018-07-07T14:19:33.330Z",
-        "status": "accepted_by_supplier",
-        "factoring_offer_batch": {
-          "id": "94f19a8f-5f9d-49ab-a873-ca737166dddf",
-          "discount_rate": 0.015,
-          "transaction_expenses": 0,
-          "comission_fixed": 0,
-          "comission_variable": 0,
-          "amount_advance": 16852522.96,
-          "amount_due": 17012621.928120002,
-          "document_count": 0,
-          "created_at": "2018-07-06T14:17:33.573Z",
-          "updated_at": "2018-07-06T14:18:41.261Z",
-          "organization_tax_number": "76656058K",
-          "assignee_id": "262ead3a-b953-4654-a28c-f413a4a608ce",
-          "comission_variable_value": 0,
-          "comissions_and_expenses": 0,
-          "discount": 160098.96812,
-          "average_days": 19,
-          "total_cost": 0.015000000000000102,
-          "expiration_date": "2018-07-07T14:18:41.261Z",
-          "invoice_number": 1,
-          "operation_date": "2018-07-06T14:17:33.573Z",
-          "status": "accepted_by_user",
-          "amount_total_invoices": 17196452,
-          "factoring_offers": [
+			"group_id": "65b34578-a0df-11e8-98d0-529269fb1459",
+			"group_name": "BBB",
+			"tasks": [
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
+			]
+    },
+    {
+			"group_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+      "group_name": "CCC",
+			"tasks": [
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
+			]
+		}
+    
+	],
+	"members": [
+		{
+			"member": {
+				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"entity_tax_number": "150143659",
+				"entity_name": "Enterprise 1"
+			},
+			"tasks": [
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
+			],
+			"available_amount": 10000,
+			"ok2pay_group": {
+				"group_id": "b5ea7fac-a0df-11e8-98d0-529269fb1459",
+				"group_name": "AAA"
+			}
+    },
+    {
+			"member": {
+				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"entity_tax_number": "131724772",
+				"entity_name": "Enterprise 2"
+			},
+			"tasks": [
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
+			],
+			"available_amount": 20000,
+			"ok2pay_group": {
+				"group_id": "b5ea7fac-a0df-11e8-98d0-529269fb1459",
+				"group_name": "BBB"
+			}
+    },
+    {
+			"member": {
+				"entity_id": "b5ea84b6-a0df-11e8-98d0-529269fb1459",
+				"entity_tax_number": "164253708",
+				"entity_name": "Enterprise 3"
+			},
+			"tasks": [
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
+			],
+			"available_amount": 30000,
+			"ok2pay_group": {
+				"group_id": "b5ea7fac-a0df-11e8-98d0-529269fb1459",
+				"group_name": "CCC"
+			}
+		}
+	],
+	"requirements": [
+		{
+      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+      "name": "Previred",
+      "value": true
+    },
+    {
+      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+      "name": "Orden de Compra",
+      "value": true
+    },
+    {
+      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+      "name": "Visto Bueno",
+      "value": true
+    },
+    {
+      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+      "name": "Recepcion",
+      "value": false
+    }
+	],
+	"executives": [
+		{
+			"id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
+			"full_name": "Executive 1",
+			"available": true
+		},
+		{
+			"id": "06d5de84-a0e0-11e8-98d0-529269fb1457",
+			"full_name": "Executive 2",
+			"available": true
+		},
+		{
+			"id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
+			"full_name": "Executive 3",
+			"available": true
+		}
+	],
+	"groups": [
+		{
+			"group_id": "06d5e21c-a0e0-11e8-98d0-529269fb1459",
+			"group_name": "AAA",
+			"tasks": [
+				{
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Previred",
+          "value": true
+        },
+        {
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Orden de Compra",
+          "value": true
+        },
+        {
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Visto Bueno",
+          "value": true
+        },
+        {
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Recepcion",
+          "value": false
+        }
+			],
+			"executives": [
+				{
+          "id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
+          "full_name": "Executive 1",
+          "available": true
+        },
+        {
+          "id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
+          "full_name": "Executive 3",
+          "available": true
+        }
+			],
+			"num_members": 2,
+			"members": [
+				{
+					"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+          "entity_tax_number": "131724772",
+          "entity_name": "Enterprise 2"
+				},
+				{
+          "entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+          "entity_tax_number": "109423904",
+          "entity_name": "Enterprise 4"
+				}
+			]
+    },
+    {
+			"group_id": "06d5e21c-a0e0-11e8-98d0-52926586b1459",
+			"group_name": "AAA",
+			"tasks": [
+				{
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Previred",
+          "value": true
+        },
+        {
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Orden de Compra",
+          "value": true
+        },
+        {
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Visto Bueno",
+          "value": true
+        },
+        {
+          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
+          "name": "Recepcion",
+          "value": false
+        }
+			],
+			"executives": [
+				{
+          "id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
+          "full_name": "Executive 2",
+          "available": true
+        },
+        {
+          "id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
+          "full_name": "Executive 4",
+          "available": true
+        }
+			],
+			"num_members": 2,
+			"members": [
+				{
+					"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+          "entity_tax_number": "210264647",
+          "entity_name": "Enterprise 5"
+				},
+				{
+          "entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+          "entity_tax_number": "68027012",
+          "entity_name": "Enterprise 8"
+				}
+			]
+		}
+	],
+	"pending_offers_by_executive": [
+		{
+			"context_id": "f9c13e54-a0e0-11e8-98d0-529269fb1459",
+			"offer": {
+				"id": "f9c13e54-a0e0-11e8-98d0-529269fb88959",
+				"number": "1",
+				"amount": 50222,
+				"issue_date": "20/05/1987"
+			},
+			"supplier": {
+				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+        "entity_tax_number": "131724772",
+        "entity_name": "Enterprise 2"
+			}
+    },
+    {
+			"context_id": "fr813e54-a0e0-11e8-8949-529269fb1459",
+			"offer": {
+				"id": "f9c13e54-a0e0-11e8-98d0-529269fb88959",
+				"number": "1",
+				"amount": 50222,
+				"issue_date": "20/05/1987"
+			},
+			"supplier": {
+				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+        "entity_tax_number": "131724772",
+        "entity_name": "Enterprise 5"
+			}
+		}
+	],
+	"confirm_group": [
+		{
+			"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+			"entity_tax_number": "131724772",
+			"entity_name": "Enterprise 2",
+			"group": {
+				"id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"name": "AAA"
+			}
+    },
+    {
+			"entity_id": "79e6f468-a0df-12bs-98d0-529269fb1459",
+			"entity_tax_number": "131724772",
+			"entity_name": "Enterprise 3",
+			"group": {
+				"id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"name": "CCC"
+			}
+    },
+    {
+			"entity_id": "79e6f468-a0df-12bs-87d0-529269fb1459",
+			"entity_tax_number": "131724772",
+			"entity_name": "Enterprise 9",
+			"group": {
+				"id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"name": "DDDD"
+			}
+		}
+	],
+	"context": [
+		{
+			"workflow_id": "f9c157b8-a0e0-11e8-98d0-529269fb1459",
+			"context_id": "f9c16320-a0e0-11e8-98d0-529269fb1459",
+			"offer": {
+				"offer_number": "1",
+				"offer_amount": 10000,
+				"offer_issue_date": "20/05/1987"
+			},
+			"graphs": [
+				{
+					"graph1_url": "https://tableau.portalfinance.co/graph1",
+					"graph2_url": "https://tableau.portalfinance.co/graph1"
+				}
+			],
+			"available_actions": [
+				{
+					"task_id": "f9c13e54-a0e0-11e8-98d0-529269fb1459",
+					"task_name": "Previred",
+					"task_state": "Pending",
+					"task_url": "",
+					"task_information": [
+						{
+							"field_1": "Numero empleados",
+							"field_2": 1,
+							"field_3": "20/05/1987"
+            },
             {
-              "id": "f72c1129-111f-4c75-b47f-e426cf229cab",
-              "invoice_id": "70276ee5-1939-4c91-b216-c3ce264037cc",
-              "factoring_offer_batch_id": "94f19a8f-5f9d-49ab-a873-ca737166dddf",
-              "amount_advance": 16852522.96,
-              "discount_rate": 0.015,
-              "operation_date": "2018-06-28",
-              "created_at": "2018-06-28T12:57:52.632Z",
-              "updated_at": "2018-07-06T14:18:41.263Z",
-              "due_date": "2018-07-27T00:00:00.000Z",
-              "rate_advanced": 0.98,
-              "discount": 160098.96812,
-              "due_days": 30,
-              "days_outstanding": 19,
-              "invoice": {
-                "issuer_id": "68002f5d-59a1-4a84-8762-d3c83274683c",
-                "issuer_tax_number": "76656058K",
-                "issuer_name": "sociedad campos y campos ltda",
-                "debtor_id": "fc55185c-1e09-4794-9eb8-c4214e5d6138",
-                "debtor_tax_number": "827894001",
-                "debtor_name": "CIA EXPLORADORA Y EXPLOTADORA MINERA CHILENO RUMANA S A",
-                "invoice_number": "19",
-                "issue_date": "2018-06-27T13:00:00.000Z",
-                "due_date": null,
-                "amount_total": 17196452,
-                "country_code": "CL",
-                "currency_code": null,
-                "status": "idle",
-                "assignment_response": {
-                  "msgs": null,
-                  "updated_at": null
-                },
-                "referencia": null,
-                "receipt_status": "Recibo otorgado por el receptor",
-                "dte_type": "33",
-                "s3_url": "https://pf-documents-qa.s3.amazonaws.com/uploads/invoice/dte/70276ee5-1939-4c91-b216-c3ce264037cc/DTE-2018-07-06_20_15_28_%2B0000-76656058K-827894001-33-19-2018-06-27.xml?X-Amz-Expires=600&X-Amz-Date=20180709T205428Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSVW2C6AFMIVCJ6Q/20180709/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=47f79949cf047eafc84b1a5615d3ea4bcb17a316e45cc2b1ece4c64d75c8d397",
-                "organization_errors": [],
-                "id": "70276ee5-1939-4c91-b216-c3ce264037cc",
-                "purchase_order_id":"c3ce264037ccc3ce264037ccc3ce264037cc"
-              }
-            }
-          ]
-        }
-      },
-      "previred_task":{
-        "last_payment":"2018-05-30",
-        "amount":558923,
-        "amount_avg":452262,
-        "employees_num":25,
-        "employees_num_avg":15
-      },
-      "validation_task":{
-        "approved":false,
-        "purchase_order_approved":true,
-        "previred_documents_approved":false
-      },
-      "ok2pay_task":{
-        "transaction_should_be_approved":true,
-        "purchase_order_should_be_approved":true,
-        "previred_should_be_approved":true,
-        "executives":[
-          {
-            "executive_name":"John Doe"
-          },
-          {
-            "executive_name":"Alan Smith"
-          }
-        ]
-         
-        }
-      }
-  ]
+							"field_1": "Ultimo pago",
+							"field_2": 1,
+							"field_3": "20/05/1987"
+						}
+					]
+				},
+				{
+					"task_id": "f9c13e54-a0e0-11e8-98d0-529269fb1457",
+					"task_name": "Orden de Compra",
+					"task_state": "Pending",
+					"task_information": [
+						{
+							"field_1": "Orden de compra",
+							"field_2": 1,
+							"field_3": 10000
+						}
+					]
+				},
+				{
+					"task_id": "f9c13e54-a0e0-11e8-98d0-5277869fb1457",
+					"task_name": "Visto Bueno",
+					"task_state": "Pending",
+					"task_information": [
+						{
+							"field_1": "Pending"
+						}
+					]
+				}
+			]
+    },
+    {
+			"workflow_id": "f9c1432c-a0e0-11e8-98d0-529269fb1459",
+			"context_id": "f9c14890-a0e0-11e8-98d0-529269fb1459",
+			"offer": {
+				"offer_number": "2",
+				"offer_amount": 901000,
+				"offer_issue_date": "20/05/1987"
+			},
+			"graphs": [
+				{
+					"graph1_url": "https://tableau.portalfinance.co/graph1",
+					"graph2_url": "https://tableau.portalfinance.co/graph1"
+				}
+			],
+			"available_actions": [
+				{
+					"task_id": "f9c13e54-a0e0-11e8-98d0-529269fb1459",
+					"task_name": "Previred",
+					"task_state": "Pending",
+					"task_url": "",
+					"task_information": [
+						{
+							"field_1": "Numero empleados",
+							"field_2": 1,
+							"field_3": "20/05/1987"
+            },
+            {
+							"field_1": "Ultimo pago",
+							"field_2": 1,
+							"field_3": "20/05/1987"
+						}
+					]
+				},
+				{
+					"task_id": "f9c13e54-a0e0-11e8-98d0-529269fb1457",
+					"task_name": "Orden de Compra",
+					"task_state": "Pending",
+					"task_information": [
+						{
+							"field_1": "Orden de compra",
+							"field_2": 1,
+							"field_3": 10000
+						}
+					]
+				},
+				{
+					"task_id": "f9c13e54-a0e0-11e8-98d0-5277869fb1457",
+					"task_name": "Visto Bueno",
+					"task_state": "Pending",
+					"task_information": [
+						{
+							"field_1": "Pending"
+						}
+					]
+				}
+			]
+		}
+	]
 }
