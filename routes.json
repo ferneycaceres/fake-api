@@ -1,5 +1,5 @@
 {
   "/ok2pay/*": "/$1",
   "/ok2pay/groups/*": "/$1",
-  "/workflow/ok2pay/*": "/$1"
+  "/workflow/*": "/$1"
 }

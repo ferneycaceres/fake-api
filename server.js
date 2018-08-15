@@ -1,8 +1,7 @@
 const jsonServer = require('json-server');
 const fs = require("fs");
 const server = jsonServer.create();
-//const router = jsonServer.router('db.json');
-const router = jsonServer.router('routes.json');
+const router = jsonServer.router('db.json');
 const m = require('./platform-api.js');
 //const m = require('./db-api.js');
 
@@ -23,5 +22,13 @@ const port = process.env.PORT || 3000;
 
 server.use(middlewares);
 server.use(router);
+
+server.use(jsonServer.rewriter({
+
+    "/ok2pay/*": "/$1",
+    "/workflow/*": "/$1"
+
+    
+  }))
 
 server.listen(port);
