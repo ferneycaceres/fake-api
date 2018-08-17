@@ -25,8 +25,8 @@
 					"value": false
 				}
 			]
-    },
-    {
+		},
+		{
 			"group_id": "65b34578-a0df-11e8-98d0-529269fb1459",
 			"group_name": "BBB",
 			"tasks": [
@@ -51,10 +51,10 @@
 					"value": false
 				}
 			]
-    },
-    {
+		},
+		{
 			"group_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-      "group_name": "CCC",
+			"group_name": "CCC",
 			"tasks": [
 				{
 					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
@@ -78,7 +78,6 @@
 				}
 			]
 		}
-    
 	],
 	"members": [
 		{
@@ -114,8 +113,8 @@
 				"group_id": "b5ea7fac-a0df-11e8-98d0-529269fb1459",
 				"group_name": "AAA"
 			}
-    },
-    {
+		},
+		{
 			"member": {
 				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
 				"entity_tax_number": "131724772",
@@ -148,8 +147,8 @@
 				"group_id": "b5ea7fac-a0df-11e8-98d0-529269fb1459",
 				"group_name": "BBB"
 			}
-    },
-    {
+		},
+		{
 			"member": {
 				"entity_id": "b5ea84b6-a0df-11e8-98d0-529269fb1459",
 				"entity_tax_number": "164253708",
@@ -186,25 +185,25 @@
 	],
 	"requirements": [
 		{
-      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-      "name": "Previred",
-      "value": true
-    },
-    {
-      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-      "name": "Orden de Compra",
-      "value": true
-    },
-    {
-      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-      "name": "Visto Bueno",
-      "value": true
-    },
-    {
-      "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-      "name": "Recepcion",
-      "value": false
-    }
+			"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+			"name": "Previred",
+			"value": true
+		},
+		{
+			"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+			"name": "Orden de Compra",
+			"value": true
+		},
+		{
+			"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+			"name": "Visto Bueno",
+			"value": true
+		},
+		{
+			"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+			"name": "Recepcion",
+			"value": false
+		}
 	],
 	"executives": [
 		{
@@ -229,131 +228,163 @@
 			"group_name": "AAA",
 			"tasks": [
 				{
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Previred",
-          "value": true
-        },
-        {
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Orden de Compra",
-          "value": true
-        },
-        {
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Visto Bueno",
-          "value": true
-        },
-        {
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Recepcion",
-          "value": false
-        }
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
 			],
 			"executives": [
 				{
-          "id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
-          "full_name": "Executive 1",
-          "available": true
-        },
-        {
-          "id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
-          "full_name": "Executive 3",
-          "available": true
-        }
+					"id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
+					"full_name": "Executive 1",
+					"available": true
+				},
+				{
+					"id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
+					"full_name": "Executive 3",
+					"available": true
+				}
 			],
 			"num_members": 2,
 			"members": [
 				{
 					"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-          "entity_tax_number": "131724772",
-          "entity_name": "Enterprise 2"
+					"entity_tax_number": "131724772",
+					"entity_name": "Enterprise 2"
 				},
 				{
-          "entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-          "entity_tax_number": "109423904",
-          "entity_name": "Enterprise 4"
+					"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+					"entity_tax_number": "109423904",
+					"entity_name": "Enterprise 4"
 				}
 			]
-    },
-    {
+		},
+		{
 			"group_id": "06d5e21c-a0e0-11e8-98d0-52926586b1459",
 			"group_name": "AAA",
 			"tasks": [
 				{
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Previred",
-          "value": true
-        },
-        {
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Orden de Compra",
-          "value": true
-        },
-        {
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Visto Bueno",
-          "value": true
-        },
-        {
-          "id": "445791fe-a0df-11e8-98d0-529269fb1459",
-          "name": "Recepcion",
-          "value": false
-        }
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Previred",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Orden de Compra",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Visto Bueno",
+					"value": true
+				},
+				{
+					"id": "445791fe-a0df-11e8-98d0-529269fb1459",
+					"name": "Recepcion",
+					"value": false
+				}
 			],
 			"executives": [
 				{
-          "id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
-          "full_name": "Executive 2",
-          "available": true
-        },
-        {
-          "id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
-          "full_name": "Executive 4",
-          "available": true
-        }
+					"id": "06d5de84-a0e0-11e8-98d0-529269fb1459",
+					"full_name": "Executive 2",
+					"available": true
+				},
+				{
+					"id": "06d5de84-a0e0-11e8-98d0-529269fb1454",
+					"full_name": "Executive 4",
+					"available": true
+				}
 			],
 			"num_members": 2,
 			"members": [
 				{
 					"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-          "entity_tax_number": "210264647",
-          "entity_name": "Enterprise 5"
+					"entity_tax_number": "210264647",
+					"entity_name": "Enterprise 5"
 				},
 				{
-          "entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-          "entity_tax_number": "68027012",
-          "entity_name": "Enterprise 8"
+					"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+					"entity_tax_number": "68027012",
+					"entity_name": "Enterprise 8"
 				}
 			]
 		}
 	],
-	"pending_offers_by_executive": [
+	"contexts": [
 		{
-			"context_id": "f9c13e54-a0e0-11e8-98d0-529269fb1459",
+			"executive_id": "1",
+			"context_id": "1",
 			"offer": {
-				"id": "f9c13e54-a0e0-11e8-98d0-529269fb88959",
+				"id": "1",
 				"number": "1",
 				"amount": 50222,
 				"issue_date": "20/05/1987"
 			},
 			"supplier": {
 				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-        "entity_tax_number": "131724772",
-        "entity_name": "Enterprise 2"
+				"entity_tax_number": "131724772",
+				"entity_name": "Enterprise 2"
 			}
-    },
-    {
-			"context_id": "fr813e54-a0e0-11e8-8949-529269fb1459",
+		},
+		{
+			"executive_id": "1",
+			"context_id": "2",
 			"offer": {
-				"id": "f9c13e54-a0e0-11e8-98d0-529269fb88959",
-				"number": "1",
-				"amount": 50222,
+				"id": "2",
+				"number": "2",
+				"amount": 4500,
 				"issue_date": "20/05/1987"
 			},
 			"supplier": {
 				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
-        "entity_tax_number": "131724772",
-        "entity_name": "Enterprise 5"
+				"entity_tax_number": "131724772",
+				"entity_name": "Enterprise 5"
+			}
+		},
+		{
+			"executive_id": "2",
+			"context_id": "3",
+			"offer": {
+				"id": "3",
+				"number": "4",
+				"amount": 55022,
+				"issue_date": "20/05/1987"
+			},
+			"supplier": {
+				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"entity_tax_number": "131724772",
+				"entity_name": "Enterprise 1"
+			}
+		},
+		{
+			"executive_id": "2",
+			"context_id": "4",
+			"offer": {
+				"id": "4",
+				"number": "3",
+				"amount": 4500,
+				"issue_date": "20/05/1987"
+			},
+			"supplier": {
+				"entity_id": "79e6f468-a0df-11e8-98d0-529269fb1459",
+				"entity_tax_number": "131724772",
+				"entity_name": "Enterprise 5"
 			}
 		}
 	],
@@ -366,8 +397,8 @@
 				"id": "79e6f468-a0df-11e8-98d0-529269fb1459",
 				"name": "AAA"
 			}
-    },
-    {
+		},
+		{
 			"entity_id": "79e6f468-a0df-12bs-98d0-529269fb1459",
 			"entity_tax_number": "131724772",
 			"entity_name": "Enterprise 3",
@@ -375,8 +406,8 @@
 				"id": "79e6f468-a0df-11e8-98d0-529269fb1459",
 				"name": "CCC"
 			}
-    },
-    {
+		},
+		{
 			"entity_id": "79e6f468-a0df-12bs-87d0-529269fb1459",
 			"entity_tax_number": "131724772",
 			"entity_name": "Enterprise 9",
@@ -389,7 +420,7 @@
 	"context": [
 		{
 			"workflow_id": "f9c157b8-a0e0-11e8-98d0-529269fb1459",
-			"context_id": "f9c16320-a0e0-11e8-98d0-529269fb1459",
+			"context_id": "1",
 			"offer": {
 				"offer_number": "1",
 				"offer_amount": 10000,
@@ -412,8 +443,8 @@
 							"field_1": "Numero empleados",
 							"field_2": 1,
 							"field_3": "20/05/1987"
-            },
-            {
+						},
+						{
 							"field_1": "Ultimo pago",
 							"field_2": 1,
 							"field_3": "20/05/1987"
@@ -443,10 +474,10 @@
 					]
 				}
 			]
-    },
-    {
+		},
+		{
 			"workflow_id": "f9c1432c-a0e0-11e8-98d0-529269fb1459",
-			"context_id": "f9c14890-a0e0-11e8-98d0-529269fb1459",
+			"context_id": "2",
 			"offer": {
 				"offer_number": "2",
 				"offer_amount": 901000,
@@ -469,8 +500,8 @@
 							"field_1": "Numero empleados",
 							"field_2": 1,
 							"field_3": "20/05/1987"
-            },
-            {
+						},
+						{
 							"field_1": "Ultimo pago",
 							"field_2": 1,
 							"field_3": "20/05/1987"

@@ -11,7 +11,7 @@ module.exports = {
             "requirements":ok2pay.requirements,
             "executives":ok2pay.executives,
             "groups":ok2pay.groups,
-            "pending_offers_by_executive":ok2pay.pending_offers_by_executive,
+            "contexts":ok2pay.contexts,
             "confirm_group":ok2pay.confirm_group,
             "context":ok2pay.context
         };
