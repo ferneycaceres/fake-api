@@ -1,7 +1,6 @@
 var faker = require('faker');
 var ok2pay = require('./ok2pay_workflow.json');
 
-
 module.exports = { 
     data : function (){
         return {
