@@ -9,11 +9,18 @@ var providers = require('./data-providers.json');
 
 var billers = require('./data-providers.json');
 
+var invoices = require('./invoices');
+
+
 
 
 module.exports = { 
     data : function (){
 
+        let suppliers = [];
+        let purchase_orders = [];
+        let states = ['rejected', 'approved', 'pending'];
+        let suppliersDetail = [];
         let agents = [];
         let companies = [];
         let permissions = [];
@@ -675,9 +682,103 @@ module.exports = {
             permissionRole.push(permissionValue);
           }
 
+          ruts = ['16826237k',
+                '249607452',
+                '188750524',
+                '50583309',
+                '151764843',
+                '223713483',
+                '75552289',
+                '200551311',
+                '148987947',
+                '191496256',
+                '50438619',
+                '202860516',
+                '148043108',
+                '213348868',
+                '5716686k',
+                '58814822',
+                '178220616',
+                '171073464',
+                '157297775',
+                '15806118k'];
+
+
+          const receptions = () => {
+            let array = [];
+            for (let i = 0; i < 2; i++) {
+              array.push(
+                {
+                  id: faker.random.uuid(),
+                  num: faker.random.alphaNumeric(7),
+                  reception_date: faker.date.between('2018-01-01', '2018-12-31'),
+                  state: faker.random.arrayElement(states),
+                  amount_received: faker.finance.amount(10000000, 1000000000),
+                  invoice: invoices(1)
+                }
+              )
+            }
+            return array;
+          }
+
+          for (let i = 0; i < 20; i++) {
+            suppliers.push({
+              supplier_id: faker.random.uuid(),
+              supplier_name: faker.company.companyName(),
+              supplier_tin: faker.random.arrayElement(ruts),
+            });
+          }
+          
+          /*suppliers.forEach(supplier => {
+            suppliersDetail.push({
+              dashboard: faker.internet.url(),
+              supplier: {
+                ...supplier,
+                supplier_city: faker.address.city(),
+                supplier_country: faker.address.country(),
+                supplier_phone: faker.phone.phoneNumber(),
+              },
+              ok2pay_group: {
+                group_id: faker.random.uuid(),
+                group_name: faker.commerce.department(),
+                tasks: tasks(),
+                executives: executives(),
+              },
+              metadata: {
+                average_margin: faker.random.number(0, 1),
+                last_year_sales: faker.finance.amount(10000000, 1000000000),
+                last_year_buys: faker.finance.amount(10000000, 1000000000),
+                last_year_accumulative_margin: faker.finance.amount(10000000, 1000000000),
+              }
+            })
+          
+          });*/
+
+
+          suppliers.forEach(supplier => {
+            purchase_orders.push(
+              {
+                id: faker.random.uuid(),
+                num: faker.random.alphaNumeric(7),
+                debtor_tin: supplier.supplier_id,
+                debtor_name: faker.name.findName(),
+                issue_date: faker.date.between('2018-01-01', '2018-12-31'),
+                amount: faker.finance.amount(10000000, 1000000000),
+                num_receptions: 1,
+                num_invoices: 1,
+                terms: faker.lorem.text(20),
+                description: faker.lorem.text(100),
+                state: faker.random.arrayElement(states),
+                receptions: receptions()
+              }
+            )
+          })
+
 
       
           return {
+            "suppliers":suppliers,
+            "purchase_orders":purchase_orders,
             "graph1": graph1,
             "graph2": graph2,
             "agents": agents,
