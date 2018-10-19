@@ -18,7 +18,9 @@ module.exports = {
     data : function (){
 
         let suppliers = [];
+        let suppliers_results = [];
         let purchase_orders = [];
+        let purchase_orders_res = [];
         let states = ['rejected', 'approved', 'pending'];
         let suppliersDetail = [];
         let agents = [];
@@ -747,14 +749,21 @@ module.exports = {
           }
 
           for (let i = 0; i < 20; i++) {
-            suppliers.push({
+            suppliers_results.push({
               supplier_id: faker.random.uuid(),
               supplier_name: faker.company.companyName(),
               supplier_tin: faker.random.arrayElement(ruts),
             });
           }
+
+          suppliers.push(
+            {
+              count:20,
+              results:suppliers_results
+            }
+          )
           
-          suppliers.forEach(supplier => {
+          suppliers_results.forEach(supplier => {
             suppliersDetail.push({
               dashboard: faker.internet.url(),
               supplier: {
@@ -780,8 +789,8 @@ module.exports = {
           });
 
 
-          suppliers.forEach(supplier => {
-            purchase_orders.push(
+          suppliers_results.forEach(supplier => {
+            purchase_orders_res.push(
               {
                 id: faker.random.uuid(),
                 num: faker.random.alphaNumeric(7),
@@ -798,6 +807,13 @@ module.exports = {
               }
             )
           })
+
+          purchase_orders.push(
+            {
+              res:20,
+              results:purchase_orders_res
+            }
+          )
 
 
       
