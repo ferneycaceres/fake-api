@@ -703,6 +703,19 @@ module.exports = {
                 '157297775',
                 '15806118k'];
 
+        const tasks = () => {
+                  let array = [];
+                  for (let i = 0; i < 3; i++) {
+                    array.push(
+                      {
+                        task_id: faker.random.uuid(),
+                        task_name: faker.random.arrayElement(['Previred', 'Orden Compra', 'Visto Bueno', 'SII']),
+                        task_value: faker.random.boolean(),
+                      },
+                    );
+                  }
+                  return array;
+                }
 
           const receptions = () => {
             let array = [];
@@ -721,6 +734,18 @@ module.exports = {
             return array;
           }
 
+          const executives = () => {
+            let array = [];
+            for (let i = 0; i < 2; i++) {
+              array.push(
+                {
+                  executive_name: faker.name.findName(),
+                },
+              );
+            }
+            return array;
+          }
+
           for (let i = 0; i < 20; i++) {
             suppliers.push({
               supplier_id: faker.random.uuid(),
@@ -729,7 +754,7 @@ module.exports = {
             });
           }
           
-          /*suppliers.forEach(supplier => {
+          suppliers.forEach(supplier => {
             suppliersDetail.push({
               dashboard: faker.internet.url(),
               supplier: {
@@ -752,7 +777,7 @@ module.exports = {
               }
             })
           
-          });*/
+          });
 
 
           suppliers.forEach(supplier => {
@@ -779,6 +804,7 @@ module.exports = {
           return {
             "suppliers":suppliers,
             "purchase_orders":purchase_orders,
+            "supplier_details":suppliersDetail,
             "graph1": graph1,
             "graph2": graph2,
             "agents": agents,
