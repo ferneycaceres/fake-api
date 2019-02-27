@@ -13,7 +13,6 @@ var invoices = require('./invoices');
 
 
 
-
 module.exports = { 
     data : function (){
 

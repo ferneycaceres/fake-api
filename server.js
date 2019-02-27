@@ -2,8 +2,8 @@ const jsonServer = require('json-server');
 const fs = require("fs");
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
-//const m = require('./platform-api.js');
-const m = require('./db-api.js');
+const m = require('./platform-api.js');
+//const m = require('./db-api.js');
 
 output = m.data();
 

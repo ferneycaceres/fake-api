@@ -1,5 +1,7 @@
 var faker = require('faker');
 var ok2pay = require('./ok2pay_workflow.json');
+const { notifications } = require('./notifications');
+
 
 module.exports = { 
     data : function (){
@@ -11,7 +13,8 @@ module.exports = {
             "groups":ok2pay.groups,
             "contexts":ok2pay.contexts,
             "confirm_group":ok2pay.confirm_group,
-            "context":ok2pay.context
+            "context":ok2pay.context,
+            "notifications": notifications()
         };
        
     }
